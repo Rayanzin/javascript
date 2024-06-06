@@ -17,9 +17,14 @@
     <h1>iniciando estudos DOM</h1>
     <p>aqui vaio o resultado</p>
     <p>aprendendo a usar <strong>DOM</strong> em javascript</p>
-    <div>clique e mim</div>
+    <div id="msg">clique e mim</div>
     <script>
-        
+      var p1 = document.getElementsByTagName('p')[0]
+      window.document.write(p1.innerText)
+      var d = window.document.getElementById('msg')
+      d.style.backgroundColor = 'black'
+      d.style.color = 'blue'
+      d.innerText = 'Olá'
     </script>
 </body>
 </html>
