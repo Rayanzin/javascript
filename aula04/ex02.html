@@ -5,19 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando numeros</title>
+    <style>
+        #res{
+            border: 2px solid black;
+            display: inline-block;
+            margin-top: 10px;
+            width: 100px;
+            height: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>somando valores</h1>
     <form>
-        <input type="number" name="txtn1" id="n1">
-        <input type="number" name="txtn2" id="n2">
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="number" name="txtn2" id="txtn2">
         <input type="button" value="somar" onclick="somar()">
+        <br>
+        <div id="res"></div>
     </form>
     <script>
         function somar() {
-            let tn1 = document.getElementById('n1')
-            let tn2 = document.getElementById('n2')
+            let tn1 = document.getElementById('txtn1') 
+            let tn2 = document.getElementById('txtn2')
+            let resultado = document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let soma = n1 + n2
+            resultado.innerText = `Soma: ${soma}`
         }
     </script>
 </body>
