@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condições</title>
+</head>
+<body>
+    <h1>nacionalidade</h1>
+    <input type="text" id="nac">
+    <input type="button" value="Enviar" onclick="clicar()">
+    <div id="res"></div>
+    <script>
+        function clicar(){
+        let pais = 'brasil'
+        let nacionalidade = document.getElementById('nac')
+        let nacional = nacionalidade.value
+        if (pais == nacional){
+            res.innerText = 'É Brasileiro'
+        } else {
+            res.innerText = 'É estrangeiro'
+        }
+    }
+    </script>
+</body>
+</html>

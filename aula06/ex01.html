@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas condicionais</title>
+</head>
+<body>
+    <h1>Relógio</h1>
+    <script>
+        let agora = new Date()
+        let hora = agora.getHours()
+        if (hora < 12 && hora >= 6){
+            document.write('Bom dia!')
+        } else if(hora >= 12 && hora < 18){
+            document.write('Boa tarde!')
+        } else{
+            document.write('Boa noite!')
+        }
+    </script>
+</body>
+</html>
