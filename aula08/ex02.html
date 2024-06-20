@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+       let valores = [9, 5, 7, 3, 6]
+       for(let position = 0;position<valores.length;position++){
+        document.write(`array: ${valores[position]}<br>`)
+       }
+       document.write('Para simplificar o codigo podemos realizar também<Br>')
+
+        for(let pos in valores){
+            document.write(`a posição ${pos} tem o valor ${valores[pos]}<br>`)
+        }
+        document.write(valores.indexOf(9))
+    </script>
+</body>
+</html>
