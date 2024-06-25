@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <p>Ano do nascimento</p>
+        <select id="sel"></select>
+        <br>
+        <p>Sexo</p>
+        <br>
+        <input type="radio" name="sex" id="m" class="genero" value="Homem" checked>
+        <label for="m">Masculino</label>
+        <br>
+        <input type="radio" name="sex" id="f" class="genero" value="Mulher">
+        <label for="f">Feminino</label>
+        <br>
+        <button onclick="verificar()">Enviar</button>
+        
+        <div id="res">Resultado</div>
+    </main>
+    <script>
+        let data = new Date()
+        let ano = data.getFullYear()
+        for (ano; ano >= data.getFullYear() - 70; ano--) {
+            sel.innerHTML += `<option>${ano}</option>`
+        }
+        function verificar() {
+            let anoSel = sel.value
+            let sexoSel = document.getElementsByName('sex')
+            let genero = ''
+            if (sexoSel[1].checked) {
+                genero = 'Mulher'
+            } else{
+                genero = 'Homem'
+            }
+            let idade = 2024 - anoSel
+            if (anoSel <= 2024 && anoSel >= 2004) {
+                res.innerHTML = `${genero} Jovem com ${idade} Anos`
+            } else if(anoSel <= 2003 && anoSel >= 1983){
+                res.innerHTML = `${genero} Adulto(a) com ${idade} Anos`
+            } else if(anoSel <= 1982 && anoSel >= 1954){
+                res.innerHTML = `${genero} Velho(a) com ${idade} Anos`
+            }
+        }
+    </script>
+</body>
+
+</html>
